@@ -4,16 +4,28 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject calculator;
-    public GameObject uiShopObject;
-    public GameObject uiMenu;
-    
+    [SerializeField]
+    private GameObject calculator;
+    [SerializeField]
+    private GameObject uiShopObject;
+    [SerializeField]
+    private GameObject uiMenu;
 
-    
+
+    private void Start()
+    {
+        OnHideShopAndCalculator();
+    }
+
     public void OnOpenCalculator()
     {
         calculator.SetActive(true);
         uiMenu.SetActive(false);
+    }
+
+    void OnHideShopAndCalculator()
+    {
+        uiShopObject.SetActive(false);
     }
 
 

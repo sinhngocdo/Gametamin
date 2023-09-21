@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class ButtonEplement : MonoBehaviour
 {
-    public CalculatorHandler calculator;
-    public string value;
+    [SerializeField]
+    private CalculatorHandler calculator;
+    [SerializeField]
+    private string value;
 
     public void ButtonNumberPressed()
     {
