@@ -16,8 +16,8 @@ public class CalculatorHandler : MonoBehaviour
     private TextMeshProUGUI screenText;
     [SerializeField]
     private TextMeshProUGUI operatorText;
-
-    public GameObject screenCalculator;
+    [SerializeField]
+    private GameObject screenCalculator;
 
     public bool isOn = false;
 
@@ -25,14 +25,8 @@ public class CalculatorHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         OFFButton();
-
-        
     }
-
-
-
 
     void ResetAll()
     {
